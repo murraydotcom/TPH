@@ -56,6 +56,24 @@
     </div>
   </header>
 
+  <!-- ============ ELEVATION RAIL (desktop wayfinding) ============ -->
+  <aside class="elev-rail" id="elevRail">
+    <a class="rail-home" href="#top" aria-label="Back to top">
+      <svg viewBox="0 0 32 32" width="22" height="22"><rect width="32" height="32" rx="7" fill="currentColor"/><path d="M9 22V10h6a4 4 0 010 8H9" fill="none" stroke="#f5efe6" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <div class="rail-track">
+      <span class="rail-line" aria-hidden="true"></span>
+      <span class="rail-progress" id="railProgress" aria-hidden="true"></span>
+      <nav class="rail-nav" aria-label="Sections">
+        <a class="rail-station" href="#about"><span class="rs-dot" aria-hidden="true"></span><span class="rs-num">01</span><span class="rs-label">About</span></a>
+        <a class="rail-station" href="#services"><span class="rs-dot" aria-hidden="true"></span><span class="rs-num">02</span><span class="rs-label">Services</span></a>
+        <a class="rail-station" href="#programs"><span class="rs-dot" aria-hidden="true"></span><span class="rs-num">03</span><span class="rs-label">Programs</span></a>
+        <a class="rail-station" href="#contact"><span class="rs-dot" aria-hidden="true"></span><span class="rs-num">04</span><span class="rs-label">Contact</span></a>
+      </nav>
+    </div>
+    <span class="rail-foot" aria-hidden="true">ELVT&rsquo;D</span>
+  </aside>
+
   <main id="main">
     <span id="top"></span>
 
@@ -131,6 +149,7 @@
     <section class="section about" id="about">
       <div class="wrap">
         <div class="section-head reveal">
+          <span class="head-index" aria-hidden="true">01<i>/04</i></span>
           <p class="eyebrow">About The Porter House</p>
           <h2>We address complex lifestyle challenges with compassion, integrity, and experience.</h2>
           <p class="section-intro">Our commitment is to deliver on our promises and help every person seek an ELVT&rsquo;D life — a structured, supportive environment where individuals and families can rebuild, recover, and rise.</p>
@@ -160,62 +179,78 @@
 
     <!-- ============ SERVICES ============ -->
     <section class="section services" id="services">
-      <div class="wrap">
-        <div class="section-head reveal">
+      <div class="wrap services-wrap">
+        <div class="section-head services-head reveal">
+          <span class="head-index" aria-hidden="true">02<i>/04</i></span>
           <p class="eyebrow">What We Offer</p>
           <h2>Care, structure, and support under one elevated standard.</h2>
+          <p class="section-intro">Four coordinated pillars of support — each one a step toward a stable, elevated life.</p>
         </div>
 
-        <div class="cards">
-          <article class="card reveal">
-            <div class="card-num">01</div>
-            <h3>Behavioral Health Support</h3>
-            <p>Connection to therapy, case management, wellness planning, and partner-based care resources.</p>
-          </article>
-          <article class="card reveal">
-            <div class="card-num">02</div>
-            <h3>PHP &amp; Recovery Programming</h3>
-            <p>Daily structure, program attendance support, recovery-centered activities, accountability, and community engagement.</p>
-          </article>
-          <article class="card reveal">
-            <div class="card-num">03</div>
-            <h3>Supportive Housing Coordination</h3>
-            <p>Resident support, daily check-ins, house expectations, safety procedures, and stability-focused structure.</p>
-          </article>
-          <article class="card reveal">
-            <div class="card-num">04</div>
-            <h3>Life Skills &amp; Workforce Readiness</h3>
-            <p>Personal development, employment preparation, financial responsibility, grooming, wellness, and leadership-building.</p>
-          </article>
-        </div>
+        <ol class="ledger">
+          <li class="ledger-row reveal">
+            <span class="ledger-num">01</span>
+            <div class="ledger-body">
+              <h3>Behavioral Health Support</h3>
+              <p>Connection to therapy, case management, wellness planning, and partner-based care resources.</p>
+            </div>
+            <span class="ledger-mark" aria-hidden="true"></span>
+          </li>
+          <li class="ledger-row reveal">
+            <span class="ledger-num">02</span>
+            <div class="ledger-body">
+              <h3>PHP &amp; Recovery Programming</h3>
+              <p>Daily structure, program attendance support, recovery-centered activities, accountability, and community engagement.</p>
+            </div>
+            <span class="ledger-mark" aria-hidden="true"></span>
+          </li>
+          <li class="ledger-row reveal">
+            <span class="ledger-num">03</span>
+            <div class="ledger-body">
+              <h3>Supportive Housing Coordination</h3>
+              <p>Resident support, daily check-ins, house expectations, safety procedures, and stability-focused structure.</p>
+            </div>
+            <span class="ledger-mark" aria-hidden="true"></span>
+          </li>
+          <li class="ledger-row reveal">
+            <span class="ledger-num">04</span>
+            <div class="ledger-body">
+              <h3>Life Skills &amp; Workforce Readiness</h3>
+              <p>Personal development, employment preparation, financial responsibility, grooming, wellness, and leadership-building.</p>
+            </div>
+            <span class="ledger-mark" aria-hidden="true"></span>
+          </li>
+        </ol>
       </div>
     </section>
 
     <!-- ============ PROGRAMS ============ -->
     <section class="section programs" id="programs">
       <div class="wrap">
-        <div class="programs-grid">
-          <div class="programs-copy reveal">
-            <p class="eyebrow">Programs &amp; Community</p>
-            <h2>People need more than services.</h2>
-            <p class="section-intro">The Porter House is built around the belief that people need structure, opportunity, support, and a safe environment to grow.</p>
-            <a class="btn btn-ghost" href="#contact">Partner With Us</a>
-          </div>
+        <div class="programs-copy reveal">
+          <span class="head-index" aria-hidden="true">03<i>/04</i></span>
+          <p class="eyebrow">Programs &amp; Community</p>
+          <h2>People need more than services.</h2>
+          <p class="section-intro">The Porter House is built around the belief that people need structure, opportunity, support, and a safe environment to grow — one step at a time.</p>
+          <a class="btn btn-ghost" href="#contact">Partner With Us</a>
+        </div>
 
-          <div class="programs-list">
-            <article class="program reveal">
-              <h3>Men&rsquo;s &amp; Women&rsquo;s Units</h3>
-              <p>Separate, structured units with rules, resident expectations, and accountability systems.</p>
-            </article>
-            <article class="program reveal">
-              <h3>Community Partnerships</h3>
-              <p>Working with providers, nonprofits, labs, educators, mentors, and local businesses to bridge gaps in care.</p>
-            </article>
-            <article class="program reveal">
-              <h3>Wellness + Grooming</h3>
-              <p>Access to grooming, self-care, clothing, hygiene support, and confidence-building services through the Elvt&rsquo;d ecosystem.</p>
-            </article>
-          </div>
+        <div class="terraces">
+          <article class="terrace reveal">
+            <span class="terrace-tier" aria-hidden="true">Tier 01</span>
+            <h3>Men&rsquo;s &amp; Women&rsquo;s Units</h3>
+            <p>Separate, structured units with rules, resident expectations, and accountability systems.</p>
+          </article>
+          <article class="terrace reveal">
+            <span class="terrace-tier" aria-hidden="true">Tier 02</span>
+            <h3>Community Partnerships</h3>
+            <p>Working with providers, nonprofits, labs, educators, mentors, and local businesses to bridge gaps in care.</p>
+          </article>
+          <article class="terrace reveal">
+            <span class="terrace-tier" aria-hidden="true">Tier 03</span>
+            <h3>Wellness + Grooming</h3>
+            <p>Access to grooming, self-care, clothing, hygiene support, and confidence-building services through the Elvt&rsquo;d ecosystem.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -224,6 +259,7 @@
     <section class="section contact" id="contact">
       <div class="wrap contact-grid">
         <div class="contact-copy reveal">
+          <span class="head-index" aria-hidden="true">04<i>/04</i></span>
           <p class="eyebrow">Ready to connect?</p>
           <h2>Let&rsquo;s talk about what comes next.</h2>
           <p class="section-intro">Contact us to learn more about programming, partnerships, resident support, or community resources.</p>

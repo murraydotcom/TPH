@@ -67,6 +67,40 @@
     revealEls.forEach(function (el) { el.classList.add("in"); });
   }
 
+  /* ---- Elevation rail: scroll progress + active station ---- */
+  var railProgress = document.getElementById("railProgress");
+  var stations = Array.prototype.slice.call(document.querySelectorAll(".rail-station"));
+
+  if (railProgress) {
+    var docEl = document.documentElement;
+    var updateProgress = function () {
+      var max = docEl.scrollHeight - docEl.clientHeight;
+      var frac = max > 0 ? docEl.scrollTop / max : 0;
+      railProgress.style.height = Math.max(0, Math.min(1, frac)) * 100 + "%";
+    };
+    window.addEventListener("scroll", updateProgress, { passive: true });
+    window.addEventListener("resize", updateProgress);
+    updateProgress();
+  }
+
+  if (stations.length && "IntersectionObserver" in window) {
+    var setActive = function (id) {
+      stations.forEach(function (s) {
+        var on = s.getAttribute("href") === "#" + id;
+        s.classList.toggle("active", on);
+        if (on) s.setAttribute("aria-current", "true");
+        else s.removeAttribute("aria-current");
+      });
+    };
+    var secObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) setActive(e.target.id); });
+    }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
+    stations.forEach(function (s) {
+      var el = document.getElementById(s.getAttribute("href").slice(1));
+      if (el) secObserver.observe(el);
+    });
+  }
+
   /* ---- Footer year ---- */
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();

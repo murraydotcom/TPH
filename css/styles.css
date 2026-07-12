@@ -5,10 +5,10 @@
    ============================================================ */
 
 :root {
-  /* Earth-tone palette */
-  --espresso:    #241d17;
-  --espresso-2:  #2b231c;
-  --coffee:      #3d2f24;
+  /* Earth-tone palette — black foundation, warm accents */
+  --espresso:    #16130f;  /* near-black, grounded surfaces */
+  --espresso-2:  #1e1a16;  /* buttons, cards, header dark */
+  --coffee:      #2a2520;  /* hover / subtle surface variation */
   --terracotta:  #b06a44;
   --terracotta-2:#c98a5e;
   --clay:        #8f5c3d;

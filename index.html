@@ -73,7 +73,7 @@
         </div>
 
         <div class="hero-art reveal" aria-hidden="true">
-          <!-- Abstract topographic art — geometric yet fluid, earth-toned -->
+          <!-- Structured elevation — ascending stepped columns with an elevation line -->
           <svg class="topo" viewBox="0 0 520 640" preserveAspectRatio="xMidYMid slice" role="img">
             <defs>
               <clipPath id="frame"><rect x="0" y="0" width="520" height="640" rx="10"/></clipPath>
@@ -81,16 +81,38 @@
             <g clip-path="url(#frame)">
               <rect width="520" height="640" fill="#f4ecdf"/>
               <!-- grounded dark top block -->
-              <rect width="520" height="120" fill="#2b231c"/>
-              <!-- moody sweeping planes -->
-              <path d="M0 150 C 130 100, 230 205, 360 165 S 520 130, 520 175 L520 300 L0 300 Z" fill="#8f5c3d"/>
-              <path d="M0 235 C 150 190, 250 285, 380 250 S 520 235, 520 275 L520 400 L0 400 Z" fill="#c98a5e"/>
-              <path d="M0 330 C 120 300, 250 380, 360 345 S 520 330, 520 360 L520 520 L0 520 Z" fill="#d9bd97"/>
-              <path d="M0 430 C 160 400, 250 470, 380 445 S 520 430, 520 455 L520 640 L0 640 Z" fill="#e7d4bb"/>
+              <rect width="520" height="96" fill="#2b231c"/>
+              <!-- structured strata field behind the columns -->
+              <rect x="0" y="300" width="520" height="260" fill="#ece1d1"/>
+              <!-- fine contour / elevation lines -->
+              <g stroke="#2b231c" stroke-opacity="0.07" stroke-width="1">
+                <line x1="0" y1="340" x2="520" y2="340"/>
+                <line x1="0" y1="392" x2="520" y2="392"/>
+                <line x1="0" y1="444" x2="520" y2="444"/>
+                <line x1="0" y1="496" x2="520" y2="496"/>
+                <line x1="0" y1="548" x2="520" y2="548"/>
+              </g>
               <!-- grounded dark base block -->
-              <path d="M0 560 C 140 525, 260 585, 390 560 S 520 545, 520 575 L520 640 L0 640 Z" fill="#241d17"/>
-              <!-- fluid espresso ridge -->
-              <path d="M0 300 C 170 250, 300 320, 520 265 L520 340 C 320 385, 180 320, 0 370 Z" fill="#3d2f24" opacity="0.85"/>
+              <rect x="0" y="560" width="520" height="80" fill="#241d17"/>
+              <!-- ascending structured columns: dark → light as they rise -->
+              <g>
+                <rect x="61"  y="430" width="70" height="130" rx="3" fill="#3d2f24"/>
+                <rect x="143" y="360" width="70" height="200" rx="3" fill="#8f5c3d"/>
+                <rect x="225" y="290" width="70" height="270" rx="3" fill="#b06a44"/>
+                <rect x="307" y="220" width="70" height="340" rx="3" fill="#c98a5e"/>
+                <rect x="389" y="150" width="70" height="410" rx="3" fill="#d9bd97"/>
+              </g>
+              <!-- elevation line + nodes tracing the rise -->
+              <polyline points="96,416 178,346 260,276 342,206 424,136"
+                        fill="none" stroke="#2b231c" stroke-width="2.4"
+                        stroke-linecap="round" stroke-linejoin="round"/>
+              <g fill="#b06a44" stroke="#f4ecdf" stroke-width="2.5">
+                <circle cx="96"  cy="416" r="6"/>
+                <circle cx="178" cy="346" r="6"/>
+                <circle cx="260" cy="276" r="6"/>
+                <circle cx="342" cy="206" r="6"/>
+                <circle cx="424" cy="136" r="6"/>
+              </g>
             </g>
           </svg>
           <div class="hero-art-tag"><span>ELVT&rsquo;D</span> standard of care</div>

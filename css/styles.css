@@ -214,11 +214,17 @@ img, svg { display: block; max-width: 100%; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-top: 2rem; }
 
 .hero-art { position: relative; }
+.topo-wrap {
+  position: relative; border-radius: var(--radius); overflow: hidden;
+  box-shadow: var(--shadow); border: 1px solid rgba(43,35,28,0.08);
+}
 .topo {
-  width: 100%; height: clamp(420px, 52vw, 620px);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  border: 1px solid rgba(43,35,28,0.08);
+  display: block; width: 100%; height: clamp(420px, 52vw, 620px);
+  will-change: transform;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero-art .topo { clip-path: inset(100% 0 0 0); transition: clip-path 1.15s var(--ease); }
+  .hero-art.in .topo { clip-path: inset(0 0 0 0); }
 }
 .hero-art-tag {
   position: absolute; left: 22px; bottom: 22px;
@@ -395,7 +401,10 @@ a.c-value:hover { color: var(--terracotta); }
 /* ============ REVEAL ANIMATION ============ */
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
 .reveal.in { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+/* terraces step in from the left */
+.terrace.reveal { transform: translateX(-30px); }
+.terrace.reveal.in { transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal, .terrace.reveal { opacity: 1; transform: none; transition: none; } }
 
 /* ============ RESPONSIVE ============ */
 @media (max-width: 940px) {

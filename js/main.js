@@ -42,7 +42,7 @@
     }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
 
     // stagger siblings within a group
-    var groupSelectors = [".pillar", ".card", ".program"];
+    var groupSelectors = [".pillar", ".ledger-row", ".terrace"];
     groupSelectors.forEach(function (sel) {
       document.querySelectorAll(sel).forEach(function (el, i) {
         el.dataset.delay = String(i * 90);
@@ -104,6 +104,45 @@
   /* ---- Footer year ---- */
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* ---- Dynamic touches (pointer-capable, motion-friendly devices only) ---- */
+  var fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  var motionOK = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (fine && motionOK) {
+    // Hero art parallax — the terraces drift with the cursor for depth
+    var hero = document.querySelector(".hero");
+    var topo = document.querySelector(".topo");
+    var tag = document.querySelector(".hero-art-tag");
+    if (hero && topo) {
+      var tx = 0, ty = 0, cx = 0, cy = 0, active = false;
+      hero.addEventListener("mousemove", function (e) {
+        var r = hero.getBoundingClientRect();
+        tx = (e.clientX - r.left) / r.width - 0.5;
+        ty = (e.clientY - r.top) / r.height - 0.5;
+        active = true;
+      });
+      hero.addEventListener("mouseleave", function () { tx = 0; ty = 0; });
+      (function frame() {
+        cx += (tx - cx) * 0.07;
+        cy += (ty - cy) * 0.07;
+        topo.style.transform = "translate3d(" + (cx * -18) + "px," + (cy * -12) + "px,0) scale(1.05)";
+        if (tag) tag.style.transform = "translate3d(" + (cx * 12) + "px," + (cy * 9) + "px,0)";
+        requestAnimationFrame(frame);
+      })();
+    }
+
+    // Magnetic call-to-action buttons
+    document.querySelectorAll(".btn:not(.btn-block)").forEach(function (btn) {
+      btn.addEventListener("mousemove", function (e) {
+        var r = btn.getBoundingClientRect();
+        var mx = (e.clientX - r.left - r.width / 2) / (r.width / 2);
+        var my = (e.clientY - r.top - r.height / 2) / (r.height / 2);
+        btn.style.transform = "translate(" + (mx * 5) + "px," + (my * 4) + "px)";
+      });
+      btn.addEventListener("mouseleave", function () { btn.style.transform = ""; });
+    });
+  }
 
   /* ---- Contact form (front-end validation + friendly confirmation) ---- */
   var form = document.getElementById("contactForm");

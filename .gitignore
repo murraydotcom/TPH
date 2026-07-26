@@ -1,0 +1,6 @@
+# Working/scratch artifacts
+scratchpad/
+node_modules/
+package-lock.json
+package.json
+*.pdf

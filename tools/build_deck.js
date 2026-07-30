@@ -36,7 +36,10 @@ const notes = {
   17: 'Same-day documentation is the standard. Every 97127 note needs five elements. The APD audits weekly.',
   18: 'How we talk IS the intervention. Practice the scripts. Behavior is communication.',
   19: 'The review rhythm and escalation paths. APD routes red flags same day; the Provider decides.',
-  20: 'Close on the promise. Point staff to the full guide and their role competency checklist.',
+  20: 'KNOWLEDGE CHECK — Safety & Scope. Answers: (1) These are screening tools; the Provider reviews and discusses — do NOT diagnose; put it on the review list. (2) The Provider only. (3) Tell the APD immediately; APD routes to Provider same day. (4) MAY NOT: diagnose, interpret clinically, adjust meds/order labs, decide medical necessity.',
+  21: 'KNOWLEDGE CHECK — Journey & Deadlines. Answers: (1) 24 hours. (2) 48 hours. (3) Same day. (4) The APD reviews it first, before the Provider.',
+  22: 'KNOWLEDGE CHECK — Screening & Documentation. Answers: (1) CogniFit and Creyos. (2) ADHD tool + autism-trait tool + executive-function tool + sensory profile. (3) ICD-10, deficits, interventions, functional response, homework. (4) Replace a formal diagnostic evaluation.',
+  23: 'Close on the promise. Point staff to the full guide, the written competency assessment + sign-off, and their role competency checklist.',
 };
 
 function base(slide, dark) {
@@ -429,15 +432,57 @@ s.addText(esc.map((it, j) => ({ text: it, options: { bullet: { indent: 14 }, col
   { x: 8.4, y: 2.5, w: 4.1, h: 3.6, fontFace: BF, fontSize: 13.5, paraSpaceAfter: 16, valign: 'top', lineSpacingMultiple: 1.05 });
 pageNum(s, 19);
 
-// ===== 20. CLOSING =====
+// ===== 20-22. KNOWLEDGE CHECK =====
+function quizSlide(pageIndex, roundLabel, title, dark, qs) {
+  const sl = p.addSlide(); base(sl, dark);
+  const titleColor = dark ? WHITE : INK;
+  sl.addText('KNOWLEDGE CHECK · ' + roundLabel.toUpperCase(), { x: 0.6, y: 0.45, w: 12, h: 0.3, fontFace: BF, fontSize: 12, bold: true, color: MINT, charSpacing: 2 });
+  sl.addText(title, { x: 0.6, y: 0.72, w: 12.1, h: 0.8, fontFace: HF, fontSize: 30, bold: true, color: titleColor });
+  const cardFill = dark ? INK2 : LIGHT;
+  const qColor = dark ? WHITE : INK;
+  qs.forEach((q, i) => {
+    const col = i % 2, row = Math.floor(i / 2);
+    const x = 0.6 + col * 6.15, y = 1.85 + row * 2.35, w = 5.95, h = 2.1;
+    if (dark) sl.addShape(p.ShapeType.roundRect, { x, y, w, h, rectRadius: 0.1, fill: { color: cardFill } });
+    else card(sl, x, y, w, h);
+    sl.addShape(p.ShapeType.ellipse, { x: x + 0.28, y: y + 0.28, w: 0.6, h: 0.6, fill: { color: MINT } });
+    sl.addText('Q' + (i + 1), { x: x + 0.28, y: y + 0.28, w: 0.6, h: 0.6, align: 'center', valign: 'middle', fontFace: BF, fontSize: 15, bold: true, color: dark ? INK : WHITE });
+    sl.addText(q, { x: x + 1.05, y: y + 0.28, w: w - 1.35, h: h - 0.55, fontFace: BF, fontSize: 15, color: qColor, valign: 'middle', lineSpacingMultiple: 1.1 });
+  });
+  sl.addText('Answers in the speaker notes · full written assessment administered separately',
+    { x: 0.6, y: 6.62, w: 12.1, h: 0.35, fontFace: BF, fontSize: 11, italic: true, color: dark ? ICE : GRAY });
+  pageNum(sl, pageIndex);
+  return sl;
+}
+
+quizSlide(20, 'Round 1', 'Safety & Scope', true, [
+  'A patient asks, "Do I have ADHD?" What do you say and do?',
+  'Who may order and interpret labs?',
+  'You notice a red flag (sudden cognitive decline). What is your next step?',
+  'Name one thing non-clinical staff MAY NOT do.',
+]);
+quizSlide(21, 'Round 2', 'Patient Journey & Deadlines', false, [
+  'What is the maximum time a referral may stay unassigned?',
+  'The home digital testing must be completed within how long?',
+  'When must a weekly 97127 session be documented?',
+  'At the monthly review, whose summary is read first — and by whom?',
+]);
+quizSlide(22, 'Round 3', 'Screening & Documentation', false, [
+  'Name the two primary computerized cognitive batteries.',
+  'To clarify AuDHD, which four screening categories combine?',
+  'List the five required elements of a 97127 session note.',
+  'Screening tools identify patterns — what do they NOT do?',
+]);
+
+// ===== 23. CLOSING =====
 s = p.addSlide(); base(s, true);
 s.addShape(p.ShapeType.ellipse, { x: -2, y: 3.6, w: 5.4, h: 5.4, fill: { color: INK2 } });
 s.addShape(p.ShapeType.ellipse, { x: 10.8, y: -2, w: 5, h: 5, fill: { color: INK2 } });
 s.addText('Confidence Through\nCognition and Education', { x: 1.0, y: 2.2, w: 11.3, h: 1.8, fontFace: HF, fontSize: 40, bold: true, color: WHITE, lineSpacingMultiple: 1.05 });
-s.addText('Read the full Employee Training Guide · Complete your role competency checklist · Ask your APD', { x: 1.05, y: 4.3, w: 11.2, h: 0.5, fontFace: BF, fontSize: 15, color: ICE });
+s.addText('Read the full guide · Pass the competency assessment & sign off · Complete your role checklist', { x: 1.05, y: 4.3, w: 11.2, h: 0.5, fontFace: BF, fontSize: 15, color: ICE });
 s.addShape(p.ShapeType.roundRect, { x: 1.05, y: 5.15, w: 3.0, h: 0.6, rectRadius: 0.3, fill: { color: MINT } });
 s.addText('CharmEd Minds™', { x: 1.05, y: 5.15, w: 3.0, h: 0.6, align: 'center', valign: 'middle', fontFace: BF, fontSize: 14, bold: true, color: INK });
-pageNum(s, 20);
+pageNum(s, 23);
 
 // speaker notes
 p.slides.forEach((sl, i) => { if (notes[i + 1]) sl.addNotes(notes[i + 1]); });

@@ -11,6 +11,12 @@ executive-functioning program (ages 5–90).
 | File | Purpose |
 |------|---------|
 | [`CharmEd-Minds-Employee-Training-Guide.md`](CharmEd-Minds-Employee-Training-Guide.md) | The complete employee onboarding and training guide — program model, roles, patient journey, population tracks, screening battery, documentation/billing, and role competency checklists. |
+| [`CharmEd-Minds-Competency-Assessment.md`](CharmEd-Minds-Competency-Assessment.md) | Employee competency assessment (trainee copy) — questions across core knowledge, scope/safety, patient journey, screening, documentation, role-specific items, and scenarios, with a sign-off block. |
+| [`CharmEd-Minds-Competency-Answer-Key.md`](CharmEd-Minds-Competency-Answer-Key.md) | Trainer answer key with correct answers, scoring/passing standard, and module references. **Keep confidential from trainees during assessment.** |
+
+Distribution-ready **Word (.docx)** versions of the guide and both assessment
+copies, plus a **20-slide onboarding deck (.pptx)**, are generated from these
+Markdown sources by the scripts in [`tools/`](tools/).
 
 ## Who this is for
 

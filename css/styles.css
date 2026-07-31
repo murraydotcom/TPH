@@ -21,7 +21,7 @@
   --bg: var(--cream);
   --fg: var(--ink);
 
-  --font-display: "Anton", "Arial Narrow", sans-serif;
+  --font-display: "Bricolage Grotesque", "Arial Black", sans-serif;
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
   --wrap: 1160px;
@@ -49,8 +49,12 @@ body {
 }
 section[id] { scroll-margin-top: 96px; }
 
-h1, h2 { font-family: var(--font-display); font-weight: 400; line-height: 0.94; letter-spacing: 0.005em; margin: 0; text-transform: uppercase; }
+h1, h2 { font-family: var(--font-display); font-weight: 800; line-height: 0.92; letter-spacing: -0.02em; margin: 0; }
+h2 { text-transform: uppercase; letter-spacing: -0.01em; }
 h3 { font-family: var(--font-sans); font-weight: 700; line-height: 1.15; margin: 0; letter-spacing: -0.01em; }
+/* elements that borrow the display face need a heavy weight loaded */
+.head-index, .brand-name, .rs-num, .rail-foot, .marquee-track span,
+.pillar-index, .ledger-num, .impact-line, .involve-card h3, .stat-num { font-weight: 800; }
 p { margin: 0; }
 a { color: inherit; text-decoration: none; }
 img, svg { display: block; max-width: 100%; }
@@ -171,7 +175,7 @@ img, svg { display: block; max-width: 100%; }
 /* ============ HERO ============ */
 .hero { position: relative; padding-top: clamp(2rem, 4vw, 3.5rem); }
 .hero-inner { display: grid; grid-template-columns: 1.08fr 0.92fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; padding-bottom: clamp(2rem, 4vw, 3rem); }
-.hero h1 { font-size: clamp(3rem, 8vw, 6.4rem); margin: 0.5rem 0 1.4rem; }
+.hero h1 { font-size: clamp(2.6rem, 6vw, 4.9rem); margin: 0.5rem 0 1.4rem; max-width: 16ch; }
 .hero .lede { font-size: 1.14rem; color: var(--ink-soft); max-width: 52ch; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-top: 2rem; }
 
@@ -234,11 +238,26 @@ img, svg { display: block; max-width: 100%; }
 
 /* ---- Impact band ---- */
 .impact { background: var(--black); color: var(--cream); position: relative; padding: clamp(3.5rem, 8vw, 6rem) 0 0; overflow: hidden; }
-.impact-inner { max-width: 24ch; }
+.impact-inner { max-width: 60ch; }
 .impact-eyebrow { font-family: var(--font-sans); font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; font-size: 0.8rem; color: var(--gold); margin-bottom: 1.1rem; }
-.impact-line { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; line-height: 0.98; font-size: clamp(2.2rem, 5.5vw, 4.4rem); max-width: 18ch; }
+.impact-line { font-family: var(--font-display); text-transform: uppercase; line-height: 0.98; font-size: clamp(1.9rem, 4.4vw, 3.4rem); letter-spacing: -0.01em; }
 .impact .skyline-band { margin-top: clamp(2rem, 5vw, 3.5rem); }
 .impact .skyline { height: clamp(80px, 12vw, 150px); opacity: 0.92; }
+
+/* stats */
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: clamp(2rem, 5vw, 3.2rem); }
+.stat { border-top: 3px solid var(--gold); padding-top: 1.1rem; }
+.stat-num { display: block; font-family: var(--font-display); font-size: clamp(2.6rem, 6vw, 4.4rem); line-height: 0.9; color: var(--gold); letter-spacing: -0.02em; }
+.stat-num.stat-text { font-size: clamp(2rem, 4.4vw, 3.2rem); }
+.stat-label { display: block; margin-top: 0.5rem; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(251,245,233,0.72); }
+
+/* ---- Partners ---- */
+.partners { background: var(--gold); color: var(--black); padding: clamp(2.2rem, 5vw, 3.2rem) 0; border-top: 3px solid var(--black); border-bottom: 3px solid var(--black); }
+.partners-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.6rem; justify-content: center; text-align: center; }
+.partners-kicker { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(21,19,16,0.7); width: 100%; text-align: center; margin-bottom: 0.2rem; }
+.partners-list { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.8rem 1.4rem; }
+.partner { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.3rem, 3.4vw, 2.2rem); letter-spacing: -0.02em; color: var(--black); }
+.partner-dot { color: var(--black); font-size: 0.7rem; }
 
 /* ---- Get Involved ---- */
 .involved { background: var(--cream-2); }
@@ -285,13 +304,19 @@ a.c-value:hover { color: var(--gold-deep); }
 .site-footer { background: var(--black); color: rgba(251,245,233,0.8); }
 .footer-sky { line-height: 0; }
 .footer-sky .skyline { height: clamp(56px, 8vw, 96px); opacity: 0.85; }
-.footer-inner { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between; align-items: start; padding: clamp(2.5rem, 5vw, 3.5rem) 0 2.4rem; border-bottom: 1px solid rgba(251,245,233,0.16); }
-.footer-brand { max-width: 44ch; }
+.footer-tagline { padding-top: clamp(2.4rem, 5vw, 3.4rem); }
+.footer-tagline p { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; font-size: clamp(2.2rem, 6.5vw, 5rem); line-height: 0.9; letter-spacing: -0.025em; color: var(--cream); }
+.footer-inner { display: flex; flex-wrap: wrap; gap: 2rem 3rem; justify-content: space-between; align-items: start; padding: clamp(2rem, 4vw, 2.8rem) 0 2.4rem; border-top: 1px solid rgba(251,245,233,0.16); margin-top: clamp(1.5rem,3vw,2.2rem); }
+.footer-brand { max-width: 40ch; }
 .footer-logo { width: 130px; height: auto; margin-bottom: 1rem; }
 .footer-brand p { color: rgba(251,245,233,0.62); font-size: 0.95rem; }
-.footer-nav { display: flex; gap: 1.8rem; flex-wrap: wrap; }
-.footer-nav a { font-size: 0.92rem; font-weight: 600; color: rgba(251,245,233,0.82); transition: color 0.3s var(--ease); }
+.footer-cols { display: flex; gap: 3rem; flex-wrap: wrap; }
+.footer-nav { display: flex; flex-direction: column; gap: 0.7rem; }
+.footer-nav a { font-size: 0.95rem; font-weight: 600; color: rgba(251,245,233,0.82); transition: color 0.3s var(--ease); }
 .footer-nav a:hover { color: var(--gold); }
+.footer-contact { font-style: normal; display: flex; flex-direction: column; gap: 0.7rem; }
+.footer-contact a, .footer-contact span { font-size: 0.95rem; color: rgba(251,245,233,0.82); transition: color 0.3s var(--ease); }
+.footer-contact a:hover { color: var(--gold); }
 .footer-base { display: flex; flex-wrap: wrap; gap: 0.6rem 2rem; justify-content: space-between; padding: 1.6rem 0 2.2rem; font-size: 0.85rem; color: rgba(251,245,233,0.5); }
 .footer-base a:hover { color: var(--gold); }
 

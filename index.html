@@ -14,7 +14,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23151310'/%3E%3Cpath d='M9 23V9h6a4 4 0 010 8H9' fill='none' stroke='%23f3b41f' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="css/styles.css" />
@@ -82,7 +82,7 @@
       <div class="wrap hero-inner">
         <div class="hero-copy">
           <p class="eyebrow reveal">Baltimore City Nonprofit &middot; Community Wellness</p>
-          <h1 class="reveal">Wellness with <span class="gold">Baltimore</span> Heart.</h1>
+          <h1 class="reveal"><span class="gold">Elevating</span> lives through structure, support &amp; community.</h1>
           <p class="lede reveal">ELVT&rsquo;D Wellness Center serves Baltimore City with behavioral health support, recovery-centered programming, supportive housing, and life skills &mdash; helping our neighbors rebuild, recover, and rise.</p>
           <div class="hero-actions reveal">
             <a class="btn btn-donate" href="#involved">Donate Now</a>
@@ -191,6 +191,22 @@
         <p class="impact-eyebrow reveal">More than services &mdash; a movement.</p>
         <p class="impact-line reveal">People need structure, opportunity, and a safe place to grow. We bring <span class="gold">Baltimore heart</span> to every step.</p>
       </div>
+      <div class="wrap">
+        <div class="stats reveal">
+          <div class="stat">
+            <span class="stat-num" data-count="30">0</span>
+            <span class="stat-label">Beds</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num stat-text">Jun 2026</span>
+            <span class="stat-label">Founded</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-count="3" data-suffix="+">0</span>
+            <span class="stat-label">Community Partners</span>
+          </div>
+        </div>
+      </div>
       <div class="skyline-band gold-sky" aria-hidden="true"><span class="skyline"></span></div>
     </section>
 
@@ -227,6 +243,20 @@
       </div>
     </section>
 
+    <!-- ============ PARTNERS ============ -->
+    <section class="partners" aria-label="Community partners">
+      <div class="wrap partners-inner">
+        <p class="partners-kicker reveal">In partnership with</p>
+        <div class="partners-list reveal">
+          <span class="partner">BHW Medical Group</span>
+          <span class="partner-dot" aria-hidden="true">&starf;</span>
+          <span class="partner">Waaah</span>
+          <span class="partner-dot" aria-hidden="true">&starf;</span>
+          <span class="partner">ELVT&rsquo;D Styles</span>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ CONTACT ============ -->
     <section class="section contact" id="contact">
       <div class="wrap contact-grid">
@@ -247,7 +277,7 @@
             </li>
             <li>
               <span class="c-label">Phone</span>
-              <span class="c-value muted">Add business phone number</span>
+              <a class="c-value" href="tel:+14437625343">443.762.5343</a>
             </li>
           </ul>
         </div>
@@ -303,21 +333,31 @@
   <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
     <div class="skyline-band gold-sky footer-sky" aria-hidden="true"><span class="skyline"></span></div>
+    <div class="wrap footer-tagline">
+      <p>Wellness with <span class="gold">Baltimore</span> Heart.</p>
+    </div>
     <div class="wrap footer-inner">
       <div class="footer-brand">
         <img src="assets/logo.png" width="120" height="auto" alt="ELVT'D Wellness Center" class="footer-logo" />
-        <p>Wellness with Baltimore heart. A nonprofit serving Baltimore City &mdash; helping neighbors rebuild, recover, and rise.</p>
+        <p>A Baltimore City nonprofit &mdash; helping neighbors rebuild, recover, and rise.</p>
       </div>
-      <nav class="footer-nav" aria-label="Footer">
-        <a href="#about">About</a>
-        <a href="#programs">Programs</a>
-        <a href="#involved">Get Involved</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <div class="footer-cols">
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="#about">About</a>
+          <a href="#programs">Programs</a>
+          <a href="#involved">Get Involved</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <address class="footer-contact">
+          <a href="tel:+14437625343">443.762.5343</a>
+          <a href="mailto:info@elvtdwellness.com">info@elvtdwellness.com</a>
+          <span>Baltimore, Maryland</span>
+        </address>
+      </div>
     </div>
     <div class="wrap footer-base">
       <p>&copy; <span id="year">2026</span> ELVT&rsquo;D Wellness Center. A Baltimore City nonprofit. All Rights Reserved.</p>
-      <p>Baltimore, Maryland &middot; <a href="mailto:info@elvtdwellness.com">info@elvtdwellness.com</a></p>
+      <p>Founded June 2026 &middot; Baltimore, Maryland</p>
     </div>
   </footer>
 

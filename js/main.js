@@ -105,6 +105,34 @@
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /* ---- Count-up stats ---- */
+  var counters = document.querySelectorAll(".stat-num[data-count]");
+  if (counters.length) {
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var runCount = function (el) {
+      var target = parseInt(el.getAttribute("data-count"), 10) || 0;
+      var suffix = el.getAttribute("data-suffix") || "";
+      if (reduce) { el.textContent = target + suffix; return; }
+      var dur = 1150, start = null;
+      var step = function (ts) {
+        if (start === null) start = ts;
+        var p = Math.min(1, (ts - start) / dur);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(eased * target) + suffix;
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+    if ("IntersectionObserver" in window) {
+      var co = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { runCount(e.target); co.unobserve(e.target); } });
+      }, { threshold: 0.4 });
+      counters.forEach(function (c) { co.observe(c); });
+    } else {
+      counters.forEach(runCount);
+    }
+  }
+
   /* ---- Dynamic touches (pointer-capable, motion-friendly devices only) ---- */
   var fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
   var motionOK = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;

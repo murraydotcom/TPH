@@ -42,7 +42,7 @@
     }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
 
     // stagger siblings within a group
-    var groupSelectors = [".pillar", ".ledger-row", ".terrace"];
+    var groupSelectors = [".pillar", ".ledger-row", ".involve-card"];
     groupSelectors.forEach(function (sel) {
       document.querySelectorAll(sel).forEach(function (el, i) {
         el.dataset.delay = String(i * 90);
@@ -110,24 +110,23 @@
   var motionOK = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   if (fine && motionOK) {
-    // Hero art parallax — the terraces drift with the cursor for depth
+    // Hero art parallax — the badge floats and the gold burst drifts for depth
     var hero = document.querySelector(".hero");
-    var topo = document.querySelector(".topo");
-    var tag = document.querySelector(".hero-art-tag");
-    if (hero && topo) {
-      var tx = 0, ty = 0, cx = 0, cy = 0, active = false;
+    var badge = document.querySelector(".hero-badge");
+    var burst = document.querySelector(".hero-burst");
+    if (hero && badge) {
+      var tx = 0, ty = 0, cx = 0, cy = 0;
       hero.addEventListener("mousemove", function (e) {
         var r = hero.getBoundingClientRect();
         tx = (e.clientX - r.left) / r.width - 0.5;
         ty = (e.clientY - r.top) / r.height - 0.5;
-        active = true;
       });
       hero.addEventListener("mouseleave", function () { tx = 0; ty = 0; });
       (function frame() {
         cx += (tx - cx) * 0.07;
         cy += (ty - cy) * 0.07;
-        topo.style.transform = "translate3d(" + (cx * -18) + "px," + (cy * -12) + "px,0) scale(1.05)";
-        if (tag) tag.style.transform = "translate3d(" + (cx * 12) + "px," + (cy * 9) + "px,0)";
+        badge.style.transform = "translate3d(" + (cx * 16) + "px," + (cy * 12) + "px,0)";
+        if (burst) burst.style.transform = "translate3d(" + (cx * -22) + "px," + (cy * -16) + "px,0)";
         requestAnimationFrame(frame);
       })();
     }

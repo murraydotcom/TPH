@@ -3,45 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Porter House &middot; ELVT&rsquo;D Wellness Center</title>
-  <meta name="description" content="The Porter House is a structured transitional housing program in Baltimore City within the ELVT'D Wellness Center — behavioral health support, recovery-centered programming, supportive housing coordination, and life skills." />
-  <meta name="theme-color" content="#16130f" />
+  <title>ELVT&rsquo;D Wellness Center &middot; Wellness with Baltimore Heart</title>
+  <meta name="description" content="ELVT'D Wellness Center is a Baltimore City nonprofit delivering behavioral health support, recovery programming, supportive housing, and life skills — wellness with Baltimore heart." />
+  <meta name="theme-color" content="#151310" />
 
-  <meta property="og:title" content="The Porter House &middot; ELVT'D Wellness Center" />
-  <meta property="og:description" content="Elevating lives through wellness, structure, support, and community. A transitional housing program serving Baltimore City." />
+  <meta property="og:title" content="ELVT'D Wellness Center" />
+  <meta property="og:description" content="Wellness with Baltimore Heart. A nonprofit serving Baltimore City with behavioral health, recovery, housing, and community wellness." />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/logo.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2316130f'/%3E%3Cpath d='M9 22V10h6a4 4 0 010 8H9' fill='none' stroke='%23c98a5e' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23151310'/%3E%3Cpath d='M9 23V9h6a4 4 0 010 8H9' fill='none' stroke='%23f3b41f' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="flag-strip" aria-hidden="true"></div>
 
   <!-- ============ HEADER ============ -->
   <header class="site-header" id="siteHeader">
     <div class="wrap header-inner">
-      <a class="brand" href="#top" aria-label="The Porter House home">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 32 32" width="30" height="30"><rect width="32" height="32" rx="7" fill="currentColor"/><path d="M9 22V10h6a4 4 0 010 8H9" fill="none" stroke="#f5efe6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </span>
+      <a class="brand" href="#top" aria-label="ELVT'D Wellness Center home">
+        <img class="brand-badge" src="assets/logo.png" width="46" height="46" alt="" />
         <span class="brand-text">
-          <span class="brand-name">The Porter House</span>
-          <span class="brand-sub">ELVT&rsquo;D Wellness Center</span>
+          <span class="brand-name">ELVT&rsquo;D Wellness</span>
+          <span class="brand-sub">Baltimore City &middot; Nonprofit</span>
         </span>
       </a>
 
       <nav class="nav" aria-label="Primary">
         <a href="#about">About</a>
-        <a href="#services">Services</a>
         <a href="#programs">Programs</a>
+        <a href="#involved">Get Involved</a>
         <a href="#contact">Contact</a>
       </nav>
 
-      <a class="btn btn-sm nav-cta" href="#contact">Request Information</a>
+      <a class="btn btn-donate nav-cta" href="#involved">Donate</a>
 
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
         <span></span><span></span><span></span>
@@ -49,29 +49,29 @@
     </div>
     <div class="mobile-nav" id="mobileNav" hidden>
       <a href="#about">About</a>
-      <a href="#services">Services</a>
       <a href="#programs">Programs</a>
+      <a href="#involved">Get Involved</a>
       <a href="#contact">Contact</a>
-      <a class="btn" href="#contact">Request Information</a>
+      <a class="btn btn-donate" href="#involved">Donate</a>
     </div>
   </header>
 
-  <!-- ============ ELEVATION RAIL (desktop wayfinding) ============ -->
+  <!-- ============ ELEVATION RAIL ============ -->
   <aside class="elev-rail" id="elevRail">
     <a class="rail-home" href="#top" aria-label="Back to top">
-      <svg viewBox="0 0 32 32" width="22" height="22"><rect width="32" height="32" rx="7" fill="currentColor"/><path d="M9 22V10h6a4 4 0 010 8H9" fill="none" stroke="#f5efe6" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <img src="assets/logo.png" width="30" height="30" alt="" />
     </a>
     <div class="rail-track">
       <span class="rail-line" aria-hidden="true"></span>
       <span class="rail-progress" id="railProgress" aria-hidden="true"></span>
       <nav class="rail-nav" aria-label="Sections">
         <a class="rail-station" href="#about"><span class="rs-dot" aria-hidden="true"></span><span class="rs-num">01</span><span class="rs-label">About</span></a>
-        <a class="rail-station" href="#services"><span class="rs-dot" aria-hidden="true"></span><span class="rs-num">02</span><span class="rs-label">Services</span></a>
-        <a class="rail-station" href="#programs"><span class="rs-dot" aria-hidden="true"></span><span class="rs-num">03</span><span class="rs-label">Programs</span></a>
+        <a class="rail-station" href="#programs"><span class="rs-dot" aria-hidden="true"></span><span class="rs-num">02</span><span class="rs-label">Programs</span></a>
+        <a class="rail-station" href="#involved"><span class="rs-dot" aria-hidden="true"></span><span class="rs-num">03</span><span class="rs-label">Involved</span></a>
         <a class="rail-station" href="#contact"><span class="rs-dot" aria-hidden="true"></span><span class="rs-num">04</span><span class="rs-label">Contact</span></a>
       </nav>
     </div>
-    <span class="rail-foot" aria-hidden="true">ELVT&rsquo;D</span>
+    <span class="rail-foot" aria-hidden="true">BMORE</span>
   </aside>
 
   <main id="main">
@@ -81,68 +81,27 @@
     <section class="hero">
       <div class="wrap hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow reveal">Transitional Housing &middot; Baltimore City</p>
-          <h1 class="reveal">Elevating lives through <em>structure</em>, support &amp; community.</h1>
-          <p class="lede reveal">The Porter House serves Baltimore City with compassionate care, behavioral health support, recovery-centered programming, housing coordination, life skills, and community-based wellness resources.</p>
+          <p class="eyebrow reveal">Baltimore City Nonprofit &middot; Community Wellness</p>
+          <h1 class="reveal">Wellness with <span class="gold">Baltimore</span> Heart.</h1>
+          <p class="lede reveal">ELVT&rsquo;D Wellness Center serves Baltimore City with behavioral health support, recovery-centered programming, supportive housing, and life skills &mdash; helping our neighbors rebuild, recover, and rise.</p>
           <div class="hero-actions reveal">
-            <a class="btn" href="#contact">Request Information</a>
-            <a class="btn btn-ghost" href="#services">Explore Services</a>
+            <a class="btn btn-donate" href="#involved">Donate Now</a>
+            <a class="btn btn-outline" href="#involved">Get Involved</a>
           </div>
         </div>
 
-        <div class="hero-art reveal" aria-hidden="true">
-          <!-- Structured elevation — stepped terraces rising to a light peak -->
-          <div class="topo-wrap">
-          <svg class="topo" viewBox="0 0 520 640" preserveAspectRatio="xMidYMid slice" role="img">
-            <defs>
-              <clipPath id="frame"><rect x="0" y="0" width="520" height="640" rx="10"/></clipPath>
-              <clipPath id="stair">
-                <polygon points="40,560 40,470 150,470 150,390 232,390 232,310 314,310 314,230 396,230 396,150 470,150 470,560"/>
-              </clipPath>
-            </defs>
-            <g clip-path="url(#frame)">
-              <rect width="520" height="640" fill="#f4ecdf"/>
-              <!-- faint background contour lines -->
-              <g stroke="#16130f" stroke-opacity="0.05" stroke-width="1">
-                <line x1="0" y1="210" x2="520" y2="210"/>
-                <line x1="0" y1="300" x2="520" y2="300"/>
-                <line x1="0" y1="390" x2="520" y2="390"/>
-                <line x1="0" y1="480" x2="520" y2="480"/>
-              </g>
-              <!-- grounded black top block -->
-              <rect width="520" height="64" fill="#16130f"/>
-              <!-- terraced strata (dark grounded base → light peak) -->
-              <g clip-path="url(#stair)">
-                <rect x="0" y="470" width="520" height="90" fill="#16130f"/>
-                <rect x="0" y="390" width="520" height="80" fill="#8f5c3d"/>
-                <rect x="0" y="310" width="520" height="80" fill="#b06a44"/>
-                <rect x="0" y="230" width="520" height="80" fill="#c98a5e"/>
-                <rect x="0" y="150" width="520" height="80" fill="#d9bd97"/>
-              </g>
-              <!-- crisp cream step edges (treads + risers) -->
-              <g clip-path="url(#stair)" stroke="#f4ecdf" stroke-width="3" stroke-linecap="square">
-                <line x1="40"  y1="470" x2="520" y2="470"/>
-                <line x1="150" y1="390" x2="520" y2="390"/>
-                <line x1="232" y1="310" x2="520" y2="310"/>
-                <line x1="314" y1="230" x2="520" y2="230"/>
-                <line x1="150" y1="470" x2="150" y2="390"/>
-                <line x1="232" y1="390" x2="232" y2="310"/>
-                <line x1="314" y1="310" x2="314" y2="230"/>
-                <line x1="396" y1="230" x2="396" y2="150"/>
-              </g>
-              <!-- grounded black base block -->
-              <rect x="0" y="560" width="520" height="80" fill="#16130f"/>
-            </g>
-          </svg>
-          </div>
-          <div class="hero-art-tag"><span>ELVT&rsquo;D</span> standard of care</div>
+        <div class="hero-art reveal">
+          <span class="hero-burst" aria-hidden="true"></span>
+          <img class="hero-badge" src="assets/logo.png" alt="ELVT'D Wellness Center — a Baltimore skyline badge with a family walking together" />
         </div>
       </div>
 
+      <div class="skyline-band" aria-hidden="true"><span class="skyline"></span></div>
+
       <div class="marquee" aria-hidden="true">
         <div class="marquee-track">
-          <span>Compassion</span><i>&bull;</i><span>Accountability</span><i>&bull;</i><span>Integrity</span><i>&bull;</i><span>Community</span><i>&bull;</i><span>Structure</span><i>&bull;</i><span>Growth</span><i>&bull;</i><span>Respect</span><i>&bull;</i>
-          <span>Compassion</span><i>&bull;</i><span>Accountability</span><i>&bull;</i><span>Integrity</span><i>&bull;</i><span>Community</span><i>&bull;</i><span>Structure</span><i>&bull;</i><span>Growth</span><i>&bull;</i><span>Respect</span><i>&bull;</i>
+          <span>Community</span><i>&starf;</i><span>Recovery</span><i>&starf;</i><span>Housing</span><i>&starf;</i><span>Behavioral Health</span><i>&starf;</i><span>Life Skills</span><i>&starf;</i><span>Baltimore Proud</span><i>&starf;</i>
+          <span>Community</span><i>&starf;</i><span>Recovery</span><i>&starf;</i><span>Housing</span><i>&starf;</i><span>Behavioral Health</span><i>&starf;</i><span>Life Skills</span><i>&starf;</i><span>Baltimore Proud</span><i>&starf;</i>
         </div>
       </div>
     </section>
@@ -152,9 +111,9 @@
       <div class="wrap">
         <div class="section-head reveal">
           <span class="head-index" aria-hidden="true">01<i>/04</i></span>
-          <p class="eyebrow">About The Porter House</p>
-          <h2>We address complex lifestyle challenges with compassion, integrity, and experience.</h2>
-          <p class="section-intro">Our commitment is to deliver on our promises and help every person seek an ELVT&rsquo;D life — a structured, supportive environment where individuals and families can rebuild, recover, and rise.</p>
+          <p class="eyebrow">Who We Are</p>
+          <h2>A wellness hub built <span class="gold">for Baltimore</span>, by Baltimore.</h2>
+          <p class="section-intro">We meet complex challenges with compassion, integrity, and experience &mdash; connecting care, housing, and personal development under one elevated standard, so every neighbor can seek an ELVT&rsquo;D life.</p>
         </div>
 
         <div class="pillars">
@@ -166,7 +125,7 @@
           <article class="pillar reveal">
             <span class="pillar-index">02</span>
             <h3>Our Vision</h3>
-            <p>To become a trusted wellness hub in Baltimore City that connects care, housing, programming, and personal development under one elevated standard.</p>
+            <p>To be a trusted wellness hub in Baltimore City that connects care, housing, programming, and personal development under one elevated standard.</p>
           </article>
           <article class="pillar reveal">
             <span class="pillar-index">03</span>
@@ -179,14 +138,14 @@
       </div>
     </section>
 
-    <!-- ============ SERVICES ============ -->
-    <section class="section services" id="services">
+    <!-- ============ PROGRAMS ============ -->
+    <section class="section programs" id="programs">
       <div class="wrap services-wrap">
         <div class="section-head services-head reveal">
           <span class="head-index" aria-hidden="true">02<i>/04</i></span>
-          <p class="eyebrow">What We Offer</p>
-          <h2>Care, structure, and support under one elevated standard.</h2>
-          <p class="section-intro">Four coordinated pillars of support — each one a step toward a stable, elevated life.</p>
+          <p class="eyebrow">What We Do</p>
+          <h2>Programs that <span class="gold">lift</span> the whole person.</h2>
+          <p class="section-intro">Coordinated, community-based support &mdash; each program a step toward a stable, elevated life.</p>
         </div>
 
         <ol class="ledger">
@@ -209,8 +168,8 @@
           <li class="ledger-row reveal">
             <span class="ledger-num">03</span>
             <div class="ledger-body">
-              <h3>Supportive Housing Coordination</h3>
-              <p>Resident support, daily check-ins, house expectations, safety procedures, and stability-focused structure.</p>
+              <h3>Supportive Housing &mdash; The Porter House</h3>
+              <p>Structured transitional housing with resident support, daily check-ins, house expectations, safety procedures, and stability-focused care.</p>
             </div>
             <span class="ledger-mark" aria-hidden="true"></span>
           </li>
@@ -226,32 +185,43 @@
       </div>
     </section>
 
-    <!-- ============ PROGRAMS ============ -->
-    <section class="section programs" id="programs">
+    <!-- ============ IMPACT BAND ============ -->
+    <section class="impact" aria-label="Our promise">
+      <div class="wrap impact-inner">
+        <p class="impact-eyebrow reveal">More than services &mdash; a movement.</p>
+        <p class="impact-line reveal">People need structure, opportunity, and a safe place to grow. We bring <span class="gold">Baltimore heart</span> to every step.</p>
+      </div>
+      <div class="skyline-band gold-sky" aria-hidden="true"><span class="skyline"></span></div>
+    </section>
+
+    <!-- ============ GET INVOLVED ============ -->
+    <section class="section involved" id="involved">
       <div class="wrap">
-        <div class="programs-copy reveal">
+        <div class="section-head reveal">
           <span class="head-index" aria-hidden="true">03<i>/04</i></span>
-          <p class="eyebrow">Programs &amp; Community</p>
-          <h2>People need more than services.</h2>
-          <p class="section-intro">The Porter House is built around the belief that people need structure, opportunity, support, and a safe environment to grow — one step at a time.</p>
-          <a class="btn btn-ghost" href="#contact">Partner With Us</a>
+          <p class="eyebrow">Get Involved</p>
+          <h2>Be part of the <span class="gold">work</span>.</h2>
+          <p class="section-intro">Every gift, every hour, and every partnership helps a Baltimore neighbor rise. Here&rsquo;s how you can help.</p>
         </div>
 
-        <div class="terraces">
-          <article class="terrace reveal">
-            <span class="terrace-tier" aria-hidden="true">Tier 01</span>
-            <h3>Men&rsquo;s &amp; Women&rsquo;s Units</h3>
-            <p>Separate, structured units with rules, resident expectations, and accountability systems.</p>
+        <div class="involve-grid">
+          <article class="involve-card featured reveal">
+            <span class="involve-icon" aria-hidden="true">&#9829;</span>
+            <h3>Donate</h3>
+            <p>Fuel recovery, housing, and wellness programming across the city. Every dollar stays close to home.</p>
+            <a class="btn btn-donate" href="#contact">Give Today</a>
           </article>
-          <article class="terrace reveal">
-            <span class="terrace-tier" aria-hidden="true">Tier 02</span>
-            <h3>Community Partnerships</h3>
-            <p>Working with providers, nonprofits, labs, educators, mentors, and local businesses to bridge gaps in care.</p>
+          <article class="involve-card reveal">
+            <span class="involve-icon" aria-hidden="true">&#9995;</span>
+            <h3>Volunteer</h3>
+            <p>Mentor, lead a workshop, or lend a hand. Bring your skills and your heart to the community.</p>
+            <a class="btn btn-outline" href="#contact">Lend a Hand</a>
           </article>
-          <article class="terrace reveal">
-            <span class="terrace-tier" aria-hidden="true">Tier 03</span>
-            <h3>Wellness + Grooming</h3>
-            <p>Access to grooming, self-care, clothing, hygiene support, and confidence-building services through the Elvt&rsquo;d ecosystem.</p>
+          <article class="involve-card reveal">
+            <span class="involve-icon" aria-hidden="true">&#9733;</span>
+            <h3>Partner</h3>
+            <p>Providers, nonprofits, employers, and local businesses &mdash; let&rsquo;s bridge gaps in care together.</p>
+            <a class="btn btn-outline" href="#contact">Build With Us</a>
           </article>
         </div>
       </div>
@@ -262,9 +232,9 @@
       <div class="wrap contact-grid">
         <div class="contact-copy reveal">
           <span class="head-index" aria-hidden="true">04<i>/04</i></span>
-          <p class="eyebrow">Ready to connect?</p>
-          <h2>Let&rsquo;s talk about what comes next.</h2>
-          <p class="section-intro">Contact us to learn more about programming, partnerships, resident support, or community resources.</p>
+          <p class="eyebrow">Connect With Us</p>
+          <h2>Let&rsquo;s talk.</h2>
+          <p class="section-intro">Requesting support, referring a neighbor, giving, volunteering, or partnering &mdash; we&rsquo;d love to hear from you.</p>
 
           <ul class="contact-details">
             <li>
@@ -303,14 +273,14 @@
               <input id="referral" name="referral" type="text" />
             </div>
             <div class="field">
-              <label for="service">Service Needed</label>
-              <select id="service" name="service">
-                <option value="" selected>Select a service&hellip;</option>
-                <option>Behavioral Health Support</option>
-                <option>PHP &amp; Recovery Programming</option>
-                <option>Supportive Housing Coordination</option>
-                <option>Life Skills &amp; Workforce Readiness</option>
-                <option>Community Partnership</option>
+              <label for="reason">I&rsquo;m reaching out to&hellip;</label>
+              <select id="reason" name="reason">
+                <option value="" selected>Select an option&hellip;</option>
+                <option>Request support / services</option>
+                <option>Refer a neighbor</option>
+                <option>Donate</option>
+                <option>Volunteer</option>
+                <option>Partner with ELVT&rsquo;D</option>
                 <option>Other</option>
               </select>
             </div>
@@ -323,7 +293,7 @@
             <label for="message">How can we help? <span class="opt">(optional)</span></label>
             <textarea id="message" name="message" rows="3"></textarea>
           </div>
-          <button class="btn btn-block" type="submit">Send Request</button>
+          <button class="btn btn-donate btn-block" type="submit">Send Message</button>
           <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
         </form>
       </div>
@@ -332,20 +302,21 @@
 
   <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
+    <div class="skyline-band gold-sky footer-sky" aria-hidden="true"><span class="skyline"></span></div>
     <div class="wrap footer-inner">
       <div class="footer-brand">
-        <span class="brand-name">The Porter House</span>
-        <p>A structured transitional housing program within the ELVT&rsquo;D Wellness Center — rebuild, recover, and rise.</p>
+        <img src="assets/logo.png" width="120" height="auto" alt="ELVT'D Wellness Center" class="footer-logo" />
+        <p>Wellness with Baltimore heart. A nonprofit serving Baltimore City &mdash; helping neighbors rebuild, recover, and rise.</p>
       </div>
       <nav class="footer-nav" aria-label="Footer">
         <a href="#about">About</a>
-        <a href="#services">Services</a>
         <a href="#programs">Programs</a>
+        <a href="#involved">Get Involved</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
     <div class="wrap footer-base">
-      <p>&copy; <span id="year">2026</span> Elvt&rsquo;d Wellness Center. All Rights Reserved.</p>
+      <p>&copy; <span id="year">2026</span> ELVT&rsquo;D Wellness Center. A Baltimore City nonprofit. All Rights Reserved.</p>
       <p>Baltimore, Maryland &middot; <a href="mailto:info@elvtdwellness.com">info@elvtdwellness.com</a></p>
     </div>
   </footer>
